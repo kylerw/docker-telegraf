@@ -59,7 +59,7 @@ if [[ -n "$timer" ]]; then
   sleep $timer
 fi
 CMD="/bin/telegraf"
-CMDARGS="-config /etc/telegraf/telegraf.conf"
+CMDARGS="--config-directory /etc/telegraf/"
 if [[ $config -eq 1 ]]; then
   exec "$CMD" $CMDARGS config
 fi
